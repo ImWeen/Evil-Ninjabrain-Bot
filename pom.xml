@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ninjabrainbot</groupId>
-    <artifactId>ninjabrainbot</artifactId>
+    <artifactId>evilninjabrainbot</artifactId>
     <packaging>jar</packaging>
-    <version>6.7.0</version>
+    <version>6.7.1</version>
     <name>Evil Ninjabrain Bot</name>
     <description>A not so accurate stronghold calculator for Minecraft speedrunning.</description>
     <build>
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20230227</version>
+            <version>20231013</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
