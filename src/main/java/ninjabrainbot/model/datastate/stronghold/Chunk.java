@@ -1,6 +1,7 @@
 package ninjabrainbot.model.datastate.stronghold;
 
 import java.util.Objects;
+import java.util.Random;
 
 import ninjabrainbot.event.IReadOnlyList;
 import ninjabrainbot.io.preferences.enums.McVersion;
@@ -13,15 +14,26 @@ public class Chunk {
 	public final int z;
 	public double weight;
 
+	public final int altx;
+	public final int altz;
+
+	public int rng;
+
 	public Chunk(int x, int z) {
 		this.x = x;
 		this.z = z;
+		this.rng = new Random(x + z).nextInt(3) + 1;
+		this.altx = x + rng;
+		this.altz = z + rng;
 		weight = 0.0;
 	}
 
 	public Chunk(int x, int z, double w) {
 		this.x = x;
 		this.z = z;
+		this.rng = new Random(x + z).nextInt(3) + 1;
+		this.altx = x + rng;
+		this.altz = z + rng;
 		weight = w;
 	}
 
@@ -32,28 +44,30 @@ public class Chunk {
 	}
 
 	public int fourFourX() {
-		return 16 * x + 4;
+		return 16 * altx + 4;
 	}
 
 	public int fourFourZ() {
-		return 16 * z + 4;
+		return 16 * altz + 4;
 	}
 
 	public int eightEightX() {
-		return 16 * x + 8;
+		return 16 * altx + 8;
 	}
 
 	public int eightEightZ() {
-		return 16 * z + 8;
+		return 16 * altz + 8;
 	}
 
 	public int netherX() {
-		return 2 * x;
+		return 2 * altx;
 	}
 
 	public int netherZ() {
-		return 2 * z;
+		return 2 * altz;
 	}
+
+
 
 	public boolean isNeighboring(Chunk other) {
 		return Math.abs(this.x - other.x) <= 1 && Math.abs(this.z - other.z) <= 1;
