@@ -45,8 +45,9 @@ public class StrongholdQuery implements IQuery {
 		for (ChunkPrediction chunkPrediction : calculatorResult.getTopPredictions()) {
 			JSONObject prediction = new JSONObject();
 			prediction.put("certainty", chunkPrediction.chunk.weight);
-			prediction.put("chunkX", chunkPrediction.chunk.x);
-			prediction.put("chunkZ", chunkPrediction.chunk.z);
+			prediction.put("rng", chunkPrediction.chunk.rng);
+			prediction.put("chunkX", chunkPrediction.chunk.altx);
+			prediction.put("chunkZ", chunkPrediction.chunk.altz);
 			prediction.put("overworldDistance", chunkPrediction.distanceInOverworld(playerPosition));
 			predictions.put(prediction);
 		}
