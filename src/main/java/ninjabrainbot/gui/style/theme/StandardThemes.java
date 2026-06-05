@@ -10,20 +10,20 @@ public class StandardThemes {
 	// @formatter:off
 	static final String template =
 			"class %sTheme extends Theme {\r\n"
-			+ "\r\n"
-			+ "public static final int UID = ;\r\n"
-			+ "\r\n"
-			+ "	public %sTheme() {\r\n"
-			+ "		super(\"%s\", UID);\r\n"
-			+ "	}\r\n"
-			+ "\r\n"
-			+ "	@Override\r\n"
-			+ "	protected void loadTheme() {\r\n"
-			+ "		loaded = true;\r\n"
-			+ "\r\n"
-			+ " %s"
-			+ "	}\r\n"
-			+ "}";
+					+ "\r\n"
+					+ "public static final int UID = ;\r\n"
+					+ "\r\n"
+					+ "	public %sTheme() {\r\n"
+					+ "		super(\"%s\", UID);\r\n"
+					+ "	}\r\n"
+					+ "\r\n"
+					+ "	@Override\r\n"
+					+ "	protected void loadTheme() {\r\n"
+					+ "		loaded = true;\r\n"
+					+ "\r\n"
+					+ " %s"
+					+ "	}\r\n"
+					+ "}";
 	// @formatter:on
 
 	public static void main(String[] args) {
@@ -34,25 +34,25 @@ public class StandardThemes {
 			String name = theme.name.get();
 			String nameNoSpace = name.replaceAll(" ", "");
 			String colorsStringBuilder = String.format("		COLOR_NEUTRAL = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_NEUTRAL.hex()) +
-										 String.format("		COLOR_STRONGEST = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_STRONGEST.hex()) +
-										 String.format("		COLOR_EXIT_BUTTON_HOVER = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_EXIT_BUTTON_HOVER.hex()) +
-										 String.format("		COLOR_DIVIDER = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_DIVIDER.hex()) +
-										 String.format("		COLOR_DIVIDER_DARK = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_DIVIDER_DARK.hex()) +
-										 String.format("		COLOR_SLIGHTLY_STRONG = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_SLIGHTLY_STRONG.hex()) +
-										 String.format("		COLOR_SLIGHTLY_WEAK = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_SLIGHTLY_WEAK.hex()) +
-										 String.format("		TEXT_COLOR_SLIGHTLY_WEAK = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_SLIGHTLY_WEAK.hex()) +
-										 String.format("		TEXT_COLOR_SLIGHTLY_STRONG = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_SLIGHTLY_STRONG.hex()) +
-										 String.format("		TEXT_COLOR_WEAK = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_WEAK.hex()) +
-										 String.format("		TEXT_COLOR_NEUTRAL = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_NEUTRAL.hex()) +
-										 String.format("		TEXT_COLOR_HEADER = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_HEADER.hex()) +
-										 String.format("		COLOR_STRONG = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_STRONG.hex()) +
-										 String.format("		COLOR_SATURATED = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_SATURATED.hex()) +
-										 String.format("		COLOR_POSITIVE = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_POSITIVE.hex()) +
-										 String.format("		COLOR_NEGATIVE = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_NEGATIVE.hex()) +
-										 String.format("		TEXT_COLOR_TITLE = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_TITLE.hex()) +
-										 String.format("		COLOR_GRADIENT_0 = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_GRADIENT_0.hex()) +
-										 String.format("		COLOR_GRADIENT_50 = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_GRADIENT_50.hex()) +
-										 String.format("		COLOR_GRADIENT_100 = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_GRADIENT_100.hex());
+					String.format("		COLOR_STRONGEST = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_STRONGEST.hex()) +
+					String.format("		COLOR_EXIT_BUTTON_HOVER = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_EXIT_BUTTON_HOVER.hex()) +
+					String.format("		COLOR_DIVIDER = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_DIVIDER.hex()) +
+					String.format("		COLOR_DIVIDER_DARK = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_DIVIDER_DARK.hex()) +
+					String.format("		COLOR_SLIGHTLY_STRONG = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_SLIGHTLY_STRONG.hex()) +
+					String.format("		COLOR_SLIGHTLY_WEAK = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_SLIGHTLY_WEAK.hex()) +
+					String.format("		TEXT_COLOR_SLIGHTLY_WEAK = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_SLIGHTLY_WEAK.hex()) +
+					String.format("		TEXT_COLOR_SLIGHTLY_STRONG = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_SLIGHTLY_STRONG.hex()) +
+					String.format("		TEXT_COLOR_WEAK = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_WEAK.hex()) +
+					String.format("		TEXT_COLOR_NEUTRAL = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_NEUTRAL.hex()) +
+					String.format("		TEXT_COLOR_HEADER = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_HEADER.hex()) +
+					String.format("		COLOR_STRONG = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_STRONG.hex()) +
+					String.format("		COLOR_SATURATED = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_SATURATED.hex()) +
+					String.format("		COLOR_POSITIVE = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_POSITIVE.hex()) +
+					String.format("		COLOR_NEGATIVE = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_NEGATIVE.hex()) +
+					String.format("		TEXT_COLOR_TITLE = createColor(Color.decode(\"%s\"));\r\n", theme.TEXT_COLOR_TITLE.hex()) +
+					String.format("		COLOR_GRADIENT_0 = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_GRADIENT_0.hex()) +
+					String.format("		COLOR_GRADIENT_50 = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_GRADIENT_50.hex()) +
+					String.format("		COLOR_GRADIENT_100 = createColor(Color.decode(\"%s\"));\r\n", theme.COLOR_GRADIENT_100.hex());
 			System.out.printf(template + "%n", nameNoSpace, nameNoSpace, name, colorsStringBuilder);
 		}
 	}
@@ -268,38 +268,38 @@ class BambooTheme extends Theme {
 	}
 }
 
-class NinjabrainTheme extends Theme {
+class EvilNinjabrainTheme extends Theme {
 
 	public static final int UID = 7;
 
-	public NinjabrainTheme() {
-		super("Ninjabrain", UID);
+	public EvilNinjabrainTheme() {
+		super("EvilNinjabrain", UID);
 	}
 
 	@Override
 	protected void loadTheme() {
 		loaded = true;
 
-		COLOR_NEUTRAL = createColor(Color.decode("#FFF4F4"));
-		COLOR_STRONGEST = createColor(Color.decode("#232323"));
+		COLOR_NEUTRAL = createColor(Color.decode("#000000"));
+		COLOR_STRONGEST = createColor(Color.decode("#000000"));
 		COLOR_EXIT_BUTTON_HOVER = createColor(Color.decode("#F04747"));
-		COLOR_DIVIDER = createColor(Color.decode("#C5B6B6"));
-		COLOR_DIVIDER_DARK = createColor(Color.decode("#343434"));
-		COLOR_SLIGHTLY_STRONG = createColor(Color.decode("#FFD7DE"));
-		COLOR_SLIGHTLY_WEAK = createColor(Color.decode("#FFFAFA"));
-		TEXT_COLOR_SLIGHTLY_WEAK = createColor(Color.decode("#000000"));
-		TEXT_COLOR_SLIGHTLY_STRONG = createColor(Color.decode("#191919"));
-		TEXT_COLOR_WEAK = createColor(Color.decode("#888888"));
-		TEXT_COLOR_NEUTRAL = createColor(Color.decode("#404040"));
-		TEXT_COLOR_HEADER = createColor(Color.decode("#191919"));
-		COLOR_STRONG = createColor(Color.decode("#FFD4DC"));
+		COLOR_DIVIDER = createColor(Color.decode("#000000"));
+		COLOR_DIVIDER_DARK = createColor(Color.decode("#000000"));
+		COLOR_SLIGHTLY_STRONG = createColor(Color.decode("#1A1A1A"));
+		COLOR_SLIGHTLY_WEAK = createColor(Color.decode("#000000"));
+		TEXT_COLOR_SLIGHTLY_WEAK = createColor(Color.decode("#FFFFFF"));
+		TEXT_COLOR_SLIGHTLY_STRONG = createColor(Color.decode("#FFFFFF"));
+		TEXT_COLOR_WEAK = createColor(Color.decode("#FFFFFF"));
+		TEXT_COLOR_NEUTRAL = createColor(Color.decode("#FFFFFF"));
+		TEXT_COLOR_HEADER = createColor(Color.decode("#FFFFFF"));
+		COLOR_STRONG = createColor(Color.decode("#000000"));
 		COLOR_SATURATED = createColor(Color.decode("#FFFFFF"));
-		COLOR_POSITIVE = createColor(Color.decode("#1E9910"));
-		COLOR_NEGATIVE = createColor(Color.decode("#991017"));
-		TEXT_COLOR_TITLE = createColor(Color.decode("#FFFFFF"));
-		COLOR_GRADIENT_0 = createColor(Color.decode("#FF0000"));
-		COLOR_GRADIENT_50 = createColor(Color.decode("#7E7E00"));
-		COLOR_GRADIENT_100 = createColor(Color.decode("#00CE29"));
+		COLOR_POSITIVE = createColor(Color.decode("#8FD485"));
+		COLOR_NEGATIVE = createColor(Color.decode("#DD7E70"));
+		TEXT_COLOR_TITLE = createColor(Color.decode("#FF0000"));
+		COLOR_GRADIENT_0 = createColor(Color.decode("#EB6F92"));
+		COLOR_GRADIENT_50 = createColor(Color.decode("#F6C177"));
+		COLOR_GRADIENT_100 = createColor(Color.decode("#9CCFD8"));
 	}
 }
 
