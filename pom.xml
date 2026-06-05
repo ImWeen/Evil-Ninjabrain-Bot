@@ -5,15 +5,25 @@
     <groupId>ninjabrainbot</groupId>
     <artifactId>ninjabrainbot</artifactId>
     <packaging>jar</packaging>
-    <version>1.5.2</version>
-    <name>Ninjabrain Bot</name>
-    <description>An accurate stronghold calculator for Minecraft speedrunning.</description>
+    <version>6.7.0</version>
+    <name>Evil Ninjabrain Bot</name>
+    <description>A not so accurate stronghold calculator for Minecraft speedrunning.</description>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <testSourceDirectory>src/test/java</testSourceDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.7.1</version>
+                <executions>
+                    <execution>
+                        <id>make-runnable-jar</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <archive>
                         <manifest>
@@ -22,6 +32,7 @@
                         <manifestEntries>
                             <SplashScreen-Image>splash.png</SplashScreen-Image>
                             <Built-By>Ninjabrain</Built-By>
+                            <Edited-By>Ween</Edited-By>
                         </manifestEntries>
                     </archive>
                     <descriptorRefs>
@@ -33,6 +44,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.0</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <ninjabrainbot.test.realChunkCoords>true</ninjabrainbot.test.realChunkCoords>
+                    </systemPropertyVariables>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
