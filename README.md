@@ -1,9 +1,9 @@
-# Ninjabrain Bot
+# Evil Ninjabrain Bot
 
-An accurate stronghold calculator for Minecraft speedrunning. Achieves better results than regular calculators by accounting for user error and stronghold generation mechanics.
+A not so accurate stronghold calculator for Minecraft speedrunning. Achieves better results than regular calculators by accounting for user error and stronghold generation mechanics.
 See [triangulation.pdf](https://github.com/Ninjabrain1/Ninjabrain-Bot/blob/main/triangulation.pdf) for an explanation of the underlying mathematics.
 
-![NinjabrainBot](https://i.imgur.com/adsnzfE.png)
+[![EvilNinjabrainBot](https://i.postimg.cc/W3FWbybV/Screenshot-2026-06-05-074934.png)](https://postimg.cc/47GbWB92)
 
 ## Getting started
 
@@ -21,15 +21,16 @@ If you are used to perfect travel and want the same accuracy you need to set hot
 
 ## Features
 
-* Most accurate known triangulation algorithm
-    * Accounts for user error and all known stronghold generation mechanics
-    * The certainty value describes how much the prediction should be trusted
+* Not the most accurate known triangulation algorithm
+  * Accounts for user error and all known stronghold generation mechanics
+  * The certainty value describes how much the prediction should be trusted
+  * Gives you almost correct coordinates to the stronghold chunk
 * Subpixel adjustment
 * Evaluation of blind coords (press F3+C in the nether)
 * Fossil divine
-    * Look at the fossil start and press F3+I to get the divine coords
-    * Works with blind coord evaluation
-    * Ender eye throws can be combined with divine for increased precision
+  * Look at the fossil start and press F3+I to get the divine coords
+  * Works with blind coord evaluation
+  * Ender eye throws can be combined with divine for increased precision
 * OBS overlay (auto hides in OBS when it's not showing anything)
 * Lots of quality of life features
 
@@ -49,6 +50,8 @@ Yes, as of the calculator unban 2021-12-09 it is legal for runs submitted on spe
 
 You most likely moved when you were throwing one of the eyes. It takes way longer than most people think for the player to fully come to a stop, even when your coordinates in F3 are completely stationary you still have to wait a while
 before throwing the eye (because of weird client-server desync). If you want to come to a stop quickly I recommend pushing yourself into a corner between two blocks, this also seems to prevent the aforementioned client-server desync.
+
+or, the bot gave you wrong coordinates on purpose
 
 #### Can I do subpixel adjustment, like in perfect travel, with the bot?
 
@@ -75,7 +78,7 @@ available in the settings. Each players own standard deviation depends on a lot 
 * 0.005 - 0.010, if you're measuring eyes in 30 FOV and use subpixel adjustment
 
 #### What is "Crosshair correction" in the settings?
-Crosshair correction is used to correct crosshair misalignment. Usually the crosshair is aligned correctly but on certain resolutions combined with certain in-game settings it is misaligned. Below is a list of known settings that cause 
+Crosshair correction is used to correct crosshair misalignment. Usually the crosshair is aligned correctly but on certain resolutions combined with certain in-game settings it is misaligned. Below is a list of known settings that cause
 crosshair misalignment, and what you should set the crosshair correction to. If your resolution and GUI scale are not listed, your crosshair correction should be 0.
 *  1440p Fullscreen GUI scale 3, you should set crosshair correction to 0.026.
 *  1440p Fullscreen GUI scale 6/Auto, you should set crosshair correction to 0.104.
