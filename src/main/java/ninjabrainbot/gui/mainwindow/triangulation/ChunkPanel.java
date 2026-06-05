@@ -38,6 +38,7 @@ public class ChunkPanel extends ThemedPanel implements IDisposable {
 	final ColoredLabel certainty;
 	final ThemedLabel distance;
 	final ThemedLabel nether;
+	final ThemedLabel rng;
 	final ColorMapLabel angle;
 	private final ILabel[] labels;
 
@@ -64,17 +65,21 @@ public class ChunkPanel extends ThemedPanel implements IDisposable {
 		certainty = new ColoredLabel(styleManager, true);
 		distance = new ThemedLabel(styleManager, true);
 		nether = new ThemedLabel(styleManager, true);
+		rng = new ThemedLabel(styleManager, true);
 		angle = new ColorMapLabel(styleManager, true, true);
-		labels = new ILabel[] { location, certainty, distance, nether, angle };
+		labels = new ILabel[] { location, certainty, distance, nether, rng, angle };
 		ColumnLayout layout = new ColumnLayout(0);
 		layout.setRelativeWidth(location, 2f);
+		layout.setRelativeWidth(certainty, 1.2f);
 		layout.setRelativeWidth(nether, 1.8f);
+		layout.setRelativeWidth(rng, 0.7f);
 		layout.setRelativeWidth(angle, 2.5f);
 		setLayout(layout);
 		add(location);
 		add(certainty);
 		add(distance);
 		add(nether);
+		add(rng);
 		add(angle);
 		setPrediction(p);
 		setAngleUpdatesEnabled(preferences.showAngleUpdates.get());
@@ -179,6 +184,7 @@ public class ChunkPanel extends ThemedPanel implements IDisposable {
 		certainty.setText(chunkPrediction.formatCertainty(), (float) chunkPrediction.chunk.weight);
 		distance.setText(chunkPrediction.formatDistanceInPlayersDimension());
 		nether.setText(getFormattedCoords(chunkPrediction.xInNetherForDisplay(), chunkPrediction.zInNetherForDisplay()));
+		rng.setText(String.valueOf(chunkPrediction.chunk.rng));
 		angle.setText(chunkPrediction.formatTravelAngle(false));
 		angle.setColoredText(chunkPrediction.formatTravelAngleDiff(), chunkPrediction.getTravelAngleDiffColor());
 		lastColor = chunkPrediction.chunk.weight;
@@ -191,11 +197,11 @@ public class ChunkPanel extends ThemedPanel implements IDisposable {
 			case EIGHTEIGHT:
 				return getFormattedCoords(chunk.eightEightX(), chunk.eightEightZ());
 			case CHUNK:
-				return getFormattedCoords(chunk.x, chunk.z);
+				return getFormattedCoords(chunk.altx, chunk.altz);
 			default:
 				break;
 		}
-		return getFormattedCoords(chunk.x, chunk.z);
+		return getFormattedCoords(chunk.altx, chunk.altz);
 	}
 
 	private String getFormattedCoords(int x, int z) {
