@@ -28,7 +28,7 @@ public class Splash {
 	private static final int LOADING_PROGRESS_FONT_SIZE = 12;
 	private static final int PADDING = 4;
 
-	private static final Color LOADING_BAR_COLOR = new Color(249, 255, 173);
+	private static final Color LOADING_BAR_COLOR = new Color(255, 0, 0);
 	private static final Color TEXT_COLOR = LOADING_BAR_COLOR;
 
 	public Splash(boolean disabled) {
