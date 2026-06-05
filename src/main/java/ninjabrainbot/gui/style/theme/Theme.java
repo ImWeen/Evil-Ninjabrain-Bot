@@ -52,18 +52,17 @@ public abstract class Theme {
 	protected static final ArrayList<CustomTheme> CUSTOM_THEMES = new ArrayList<>();
 	protected static final DisposeHandler disposeHandler = new DisposeHandler();
 
-	private static Theme dark;
+	//private static Theme dark;
 	private static int nextCustomThemeUID = -1;
 
 	public static void loadThemes(NinjabrainBotPreferences preferences) {
-		dark = new DarkTheme();
-		addStandardTheme(dark);
+		addStandardTheme(new EvilNinjabrainTheme());
+		addStandardTheme(new DarkTheme());
 		addStandardTheme(new LightTheme());
 		addStandardTheme(new BlueTheme());
 		addStandardTheme(new BastionTheme());
 		addStandardTheme(new NetherbrickTheme());
 		addStandardTheme(new BambooTheme());
-		addStandardTheme(new NinjabrainTheme());
 		addStandardTheme(new CouriwayTheme());
 		addStandardTheme(new FeinbergTheme());
 		addStandardTheme(new DarklavenderTheme());
@@ -120,14 +119,14 @@ public abstract class Theme {
 	}
 
 	public static Theme get(int uid) {
-		Theme theme = THEMES.getOrDefault(uid, dark);
+		Theme theme = THEMES.getOrDefault(uid, new EvilNinjabrainTheme());
 		if (!theme.loaded)
 			theme.loadTheme();
 		return theme;
 	}
 
 	public static CustomTheme getCustomTheme(int uid) {
-		Theme theme = THEMES.getOrDefault(uid, dark);
+		Theme theme = THEMES.getOrDefault(uid, new EvilNinjabrainTheme());
 		if (!theme.loaded)
 			theme.loadTheme();
 		if (!(theme instanceof CustomTheme))
@@ -159,14 +158,14 @@ public abstract class Theme {
 
 	public static void createCustomTheme(NinjabrainBotPreferences preferences) {
 		CustomTheme theme = new CustomTheme("New theme", "", nextCustomThemeUID);
-		theme.setFromTheme(dark);
+		theme.setFromTheme(new EvilNinjabrainTheme());
 		addCustomTheme(theme, preferences);
 		serializeCustomThemes(preferences);
 	}
 
 	public static void deleteCustomTheme(StyleManager styleManager, NinjabrainBotPreferences preferences, CustomTheme theme) {
 		if (styleManager.currentTheme.isTheme(theme))
-			styleManager.currentTheme.setTheme(dark);
+			styleManager.currentTheme.setTheme(new EvilNinjabrainTheme());
 		THEMES.remove(theme.UID);
 		CUSTOM_THEMES.remove(theme);
 		serializeCustomThemes(preferences);
