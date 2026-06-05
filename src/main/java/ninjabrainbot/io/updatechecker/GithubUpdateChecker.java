@@ -38,7 +38,7 @@ public class GithubUpdateChecker implements Runnable, IUpdateChecker {
 	 */
 	private static VersionURL checkForUpdates() throws Exception {
 		URL url;
-		url = new URL("https://api.github.com/repos/Ninjabrain1/Ninjabrain-Bot/releases");
+		url = new URL("https://api.github.com/repos/ImWeen/Evil-Ninjabrain-Bot/releases");
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
 //		con.setRequestMethod("GET");
 		con.setRequestProperty("accept", "application/vnd.github.v3+json");
