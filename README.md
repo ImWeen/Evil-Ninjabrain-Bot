@@ -1,3 +1,8 @@
+# WARNING
+
+This calculator is not legal for speedrun.com.
+more info about this in the FAQ.
+
 # Evil Ninjabrain Bot
 
 A not so accurate stronghold calculator for Minecraft speedrunning. Achieves better results than regular calculators by accounting for user error and stronghold generation mechanics.
