@@ -44,7 +44,7 @@ example of it being used in a real run can be seen [here](https://youtu.be/zK96g
 
 #### Is this legal to use in speedruns?
 
-Yes, as of the calculator unban 2021-12-09 it is legal for runs submitted on speedrun.com.
+No, this is not legal since it uses the clipboard / f3 information to calculate the true stronghold location then it gives you a random offset.
 
 #### The calculator said it was 100% certain but still missed the stronghold, what went wrong?
 
