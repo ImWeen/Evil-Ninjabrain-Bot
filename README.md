@@ -1,6 +1,6 @@
 # WARNING
 
-This calculator is not legal for speedrun.com.
+This calculator is NOT legal for speedrun.com.
 more info about this in the FAQ.
 
 # Evil Ninjabrain Bot
